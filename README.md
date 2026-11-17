@@ -1,6 +1,3 @@
-# hello-github
-Repository pertama saya
-=================================================
 # Hello GitHub
 Halo! Ini adalah repository GitHub pertama saya.
 ## Tentang Saya
