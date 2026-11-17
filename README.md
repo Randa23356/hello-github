@@ -1,8 +1,9 @@
 # Hello GitHub
 Halo! Ini adalah repository GitHub pertama saya.
 ## Tentang Saya
-- Nama: Nama Mahasiswa
-- Program Studi: Nama Program Studi
-- Tambah seperlunya
+- Nama: Arman Wiranda
+- Program Studi: Teknik Informatika
+- Fakultas: Teknik
+- Universitas: Universitas Hamzanwadi
 ## Tujuan
 Belajar menggunakan Git dan GitHub.
