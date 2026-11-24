@@ -1,12 +1,92 @@
-<html>
-  <head>
-    <title>
-      Hello Github
-    </title>
-  </head>
-  <body>
-    <h1>
-      Hello Github
-    </h1>
-  </body>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello GitHub</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white flex items-center justify-center p-6">
+
+    <main
+        x-data="{ 
+            name: 'GitHub',
+            clicked: false,
+            currentYear: new Date().getFullYear()
+        }"
+        class="w-full max-w-lg"
+    >
+
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+
+            <!-- Logo -->
+            <div class="flex justify-center mb-8">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                    <svg class="w-10 h-10 text-slate-950" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.12-3.05 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.18 3.2-1.18.64 1.59.24 2.76.12 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.12c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <div class="text-center">
+                <p class="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">
+                    Welcome to
+                </p>
+
+                <h1 class="text-4xl font-bold mb-4">
+                    Hello <span x-text="name" class="text-blue-400"></span>!
+                </h1>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Your journey as a developer starts here.
+                    Build something amazing, share your code,
+                    and collaborate with the world.
+                </p>
+            </div>
+
+            <!-- Interactive Button -->
+            <div class="mt-8">
+                <button
+                    @click="clicked = !clicked"
+                    class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500
+                    transition-all duration-300 font-semibold shadow-lg shadow-blue-600/20"
+                >
+                    <span x-show="!clicked">Get Started →</span>
+                    <span x-show="clicked">Hello, Developer! ✓</span>
+                </button>
+            </div>
+
+            <!-- Alpine Message -->
+            <div
+                x-show="clicked"
+                x-transition
+                class="mt-5 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center"
+            >
+                <p class="text-blue-300 text-sm">
+                    Congratulations! Your first GitHub page is running.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-6 border-t border-slate-800 text-center">
+                <p class="text-slate-500 text-xs">
+                    © <span x-text="currentYear"></span> Hello GitHub.
+                    Built with HTML, Tailwind CSS & Alpine.js.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
 </html>
